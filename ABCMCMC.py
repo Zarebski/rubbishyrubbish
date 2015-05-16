@@ -17,8 +17,27 @@ def q_sample(theta):
 	"""
 	return None
 
+def q(theta_prop,theta_current):
+	"""returns the value of the proposal density at theta_prop conditioned on 
+	the current postion theta_current
+						IN PROGRESS
+	"""
+	return None
+
 def f(theta):
 	"""returns a data set generated with the parameter theta
+						IN PROGRESS
+	"""
+	return None
+
+def d(X_true,X_star):
+	"""returns the distance between samples via a metric on a summary statistic
+						IN PROGRESS
+	"""
+	return None
+
+def prior(theta):
+	"""returns the value of the prior distribution evaluated at theta
 						IN PROGRESS
 	"""
 	return None
@@ -26,7 +45,7 @@ def f(theta):
 
 
 
-def ABC_MCMC(epsilon, N):
+def ABC_MCMC(epsilon, N, X_true):
 	"""Carries out a MCMC of N steps and returns the states visited
 						FINISHED!!!
 	"""
