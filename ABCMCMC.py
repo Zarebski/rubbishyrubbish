@@ -13,9 +13,12 @@ import matplotlib.pyplot as plt
 
 def q_sample(theta):
 	"""return a sample from the truncated normal centered about theta
-						IN PROGRESS
+						FINISHED!!!
 	"""
-	return None
+	r = 2
+	while r >= 1 or r <= 0:
+		r = np.random.normal(loc=theta, scale=0.1)
+	return r
 
 def q(theta_prop,theta_current):
 	"""returns the value of the proposal density at theta_prop conditioned on 
@@ -38,11 +41,13 @@ def d(X_true,X_star):
 
 def prior(theta):
 	"""returns the value of the prior distribution evaluated at theta
-						IN PROGRESS
+						FINISHED!!!
 	"""
-	return None
-
-
+	if theta <=1 and theta >= 0:
+		y = 1
+	else:
+		y = 0
+	return y
 
 
 def ABC_MCMC(epsilon, N, X_true):
